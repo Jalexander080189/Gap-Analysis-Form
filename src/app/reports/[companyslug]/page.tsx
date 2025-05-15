@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useEffect, useState, useCallback } from 'react';
-import { CompanyGapAnalysisForm, CompanyGapAnalysisFormValues } from '@/components/CompanyGapAnalysisForm';
+import { CompanyGapAnalysisForm, CompanyGapAnalysisFormValues } from '../../../components/CompanyGapAnalysisForm';
 import { useParams, useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { PrinterIcon, Share2Icon, CheckCircle2Icon, AlertTriangleIcon, LinkIcon } from 'lucide-react'; // Added LinkIcon
