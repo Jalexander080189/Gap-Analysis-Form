@@ -1,14 +1,14 @@
-// 👉 Paste this into your next.config.ts (overwrite existing config)
+import path from 'path'
+import type { NextConfig } from 'next'
 
-import path from 'path';
-import { defineConfig } from 'next';
-
-export default defineConfig({
+const nextConfig: NextConfig = {
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, 'src'),
-    };
-    return config;
+    }
+    return config
   },
-});
+}
+
+export default nextConfig
