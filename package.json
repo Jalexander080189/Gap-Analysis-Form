@@ -28,5 +28,10 @@
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.6",
     "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "@types/react": "^19.1.4",
+    "typescript": "^5.8.3"
   }
 }
