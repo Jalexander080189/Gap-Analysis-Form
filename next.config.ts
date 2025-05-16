@@ -1,13 +1,14 @@
-import { NextConfig } from 'next'
+// 👉 Paste this into your next.config.ts (overwrite existing config)
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-}
+import path from 'path';
+import { defineConfig } from 'next';
 
-export default nextConfig
+export default defineConfig({
+  webpack(config) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, 'src'),
+    };
+    return config;
+  },
+});
