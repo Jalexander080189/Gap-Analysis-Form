@@ -1,7 +1,7 @@
-import path from 'path'
-import type { NextConfig } from 'next'
+/** @type {import('next').NextConfig} */
+const path = require('path');
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -9,6 +9,6 @@ const nextConfig: NextConfig = {
     }
     return config
   },
-}
+};
 
-export default nextConfig
+module.exports = nextConfig;
